@@ -1,8 +1,9 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
 body { 
-    width: 62%; 
-    min-width: 700px; 
-    max-width: 820px; 
-    margin: 32px auto; 
     font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; 
     background-color: #5FCDE4; font-weight: 300; 
 	-moz-text-size-adjust: none; 
@@ -15,17 +16,10 @@ h1, h2 {
 }
 h1 { 
     font-size: 42px; 
-    float: left; 
-    padding: 0px; 
-    padding-left: 100px; 
-    margin: 0px 32px 0px 64px; 
-    background-image: url(http://i39.tinypic.com/mh3ocm.gif); 
-    background-repeat: no-repeat; 
-    height: 60px; 
     font-weight: 100;
 }
 h2 { 
-    margin-bottom: 0px; 
+    margin: 0; 
 }
 
 img { 
@@ -33,24 +27,62 @@ img {
 	border: 1px solid black;
 }
 
-#details { 
+#content{
+    width: 62%; 
+    min-width: 700px; 
+    max-width: 820px; 
+    margin: 32px auto; 
+    text-align: center;
+}
+
+#head-wrap{
+    height: auto;
+    text-align: center;
+}
+
+#head-wrap div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#head-wrap #pic{
+    background-image: url(http://i39.tinypic.com/mh3ocm.gif); 
+    background-repeat: no-repeat; 
+    height: 60px; 
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 40px
+}
+
+#head-wrap #name{
+    font-size: 42px; 
+    font-weight: 100;
+}
+
+#head-wrap #details { 
     padding-top: 12px; 
     font-size: 14px; 
     font-weight: 300;
+    text-align: left;
+    margin-left: 28px;
 }
 
 #left, #right { 
     font-size: 14px; 
     padding-top: 1px; 
+    margin-top: 20px;
     margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+#left {
+    width: 45%;
+    margin-right: 5%;
 }
 #right { 
     width: 45%; 
-    margin-left: 52%;
-}
-#left {
-    width: 45%; 
-    float: left;
 }
 #left li, #right li {
     margin-bottom: 16px;
@@ -96,7 +128,38 @@ li a:first-child, p a:first-child {
 }
 
 @media screen and (max-device-width: 480px){
-  body{
-    width: 100%;
-  }
+    body, #content, #head-wrap{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: auto;
+        min-width: 0;
+        max-width: 480px;
+    }
+    #head-wrap{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        overflow: hidden;
+    }
+    #pic{
+        width: 15vw !important;
+        height: 15vw !important;
+        background-size: cover;
+        margin-right: 4vw !important;
+    }
+    #name{
+        font-size: 11vw !important;
+    }
+    #left, #right{
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+    #details{
+        display: none !important;
+    }
+    #footer{
+        padding: 10px 0 10px 0;
+        font-size: 3.25vw;
+    }
 }
