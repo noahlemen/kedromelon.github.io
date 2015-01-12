@@ -182,10 +182,6 @@ li a:first-child, p a:first-child {
     .section{
         max-height: 40px;
         overflow: hidden;
-        transition: max-height .05s;
-        -webkit-transition: max-height .05s;
-        -moz-transition: max-height .05s;
-        -ms-transition: max-height .05s;
     }
     .section.show{
         max-height: 5000px;
