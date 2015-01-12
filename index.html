@@ -7,6 +7,8 @@
 <title>Noah Lemen</title>
 <link href='https://pbs.twimg.com/profile_images/1356232221/avatars-000001830545-romu25-crop.jpg' rel='icon' type='image/x-icon'/>
 <link rel="stylesheet" type="text/css" href="index.css">
+<script src="jquery-1.11.2.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.14/jquery.scrollTo.min.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
 		</div>
 		<div class="section">
 			<h2>Mastering</h2>
-			<p>PopSTAR's <a href="http://p0pst4r.bandcamp.com/album/memory-machine"><b>Memory Machine EP</b></a></p><iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/16758962&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+			<p>PopSTAR's <a href="http://p0pst4r.bandcamp.com/album/memory-machine"><b>Memory Machine EP</b></a></p><p><iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/16758962&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></p>
 		</div>
 	</div>
 	<div id="right">
@@ -63,9 +65,22 @@
 	</div>
 
 	<div id="footer"> 
-		<a href="http://www.twitter.com/kedromelon">@kedromelon</a> | <a href="http://www.google.com/recaptcha/mailhide/d?k=01VleS_TGVEKuo2tVe_RieJQ==&amp;c=6hYNF4MgXhF6069vh3XoTDT9zDYU4J1WYiCYGwVNqHY=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501VleS_TGVEKuo2tVe_RieJQ\75\75\46c\0756hYNF4MgXhF6069vh3XoTDT9zDYU4J1WYiCYGwVNqHY\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">n...</a>@gmail.com | <a href="http://www.soundcloud.com/kedromelon">SoundCloud</a> | <a href="http://www.github.com/kedromelon">GitHub</a> | <a href="http://www.linkedin.com/in/noahlemen">LinkedIn</a>
+		<a href="http://www.twitter.com/kedromelon"><img src="icons/twitter.png"></a><a href="http://www.google.com/recaptcha/mailhide/d?k=01VleS_TGVEKuo2tVe_RieJQ==&amp;c=6hYNF4MgXhF6069vh3XoTDT9zDYU4J1WYiCYGwVNqHY=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501VleS_TGVEKuo2tVe_RieJQ\75\75\46c\0756hYNF4MgXhF6069vh3XoTDT9zDYU4J1WYiCYGwVNqHY\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address"><img src="icons/email.png"></a><a href="http://www.soundcloud.com/kedromelon"><img src="icons/soundcloud.png"></a><a href="http://www.github.com/kedromelon"><img src="icons/github.png"></a><a href="http://www.linkedin.com/in/noahlemen"><img src="icons/linkedin.png"></a>
 	</div>
 </div>
+<script>
+if (screen && screen.width <= 480) {
+	$('#footer').insertAfter('#head-wrap');
+	$('.section h2').on('click', function(){
+		if ($(this).parent().hasClass('show')){
+			$(this).parent().removeClass('show');
+		}else{
+			$('.show').removeClass('show');
+			$(this).parent().addClass('show');
+			$.scrollTo($(this), 500);
+		}
+	});
+}
+</script>
 </body>
-
 </html>
