@@ -8,7 +8,6 @@
 <link href='https://pbs.twimg.com/profile_images/1356232221/avatars-000001830545-romu25-crop.jpg' rel='icon' type='image/x-icon'/>
 <link rel="stylesheet" type="text/css" href="index.css">
 <script src="jquery-1.11.2.min.js"></script>
-<script src="jquery.scrollTo.min.js"></script>
 </head>
 
 <body>
@@ -77,7 +76,9 @@ if (screen && screen.width <= 480) {
 		}else{
 			$('.show').removeClass('show');
 			$(this).parent().addClass('show');
-			$.scrollTo($(this), 500);
+			$('html, body').animate({
+        scrollTop: $(this).offset().top
+    }, 400);
 		}
 	});
 }
