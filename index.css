@@ -180,7 +180,7 @@ li a:first-child, p a:first-child {
         height: auto;
     }
     .section{
-        max-height: 40px;
+        max-height: 38px;
         overflow: hidden;
     }
     .section.show{
