@@ -51,6 +51,9 @@ $(function(){
     	if (_this.hasClass('clicked')){
     		var prevclicked = _this.removeClass('clicked').find('.info').removeClass('open');
     		$('.down').removeClass('down');
+    		setTimeout(function(){
+    			prevclicked.find('.info-content').empty();
+    		}, 400);
     		if ($(window).scrollTop() + window.innerHeight > height){
     			$('html,body').stop().animate({scrollTop: height - window.innerHeight - 16 }, 200);
     			setTimeout(function(){$('body')[0].style.height = ''}, 200);
@@ -91,6 +94,9 @@ $(function(){
     		if (prevclicked.length){
 	    		_this[0].classList.remove('down');
 	    		$('.unit.clicked').removeClass('clicked').find('.info').removeClass('open');
+	    		setTimeout(function(){
+	    			prevclicked.find('.info-content').empty();
+	    		}, 400);
     		}
     		
 	    	if (!isMobile){

@@ -106,12 +106,13 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', [
     'clean',
-    'concurrent',
     'uglify', 
     'cssmin',
     'htmlcompressor',
     'newer:imagemin',
     'copy'
   ]);
+
+  grunt.registerTask('deploy', ['default']);
 
 };
