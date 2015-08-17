@@ -20,8 +20,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: '{,*/}*.js',
-          dest: 'build',
-          ext: '.min.js'
+          dest: 'build'
         }]
       }
     },
@@ -41,8 +40,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: ['{,*/}*.css', '!{,*/}*.min.css'],
-          dest: 'build',
-          ext: '.min.css',
+          dest: 'build'
         }]
       }
     },
@@ -83,10 +81,9 @@ module.exports = function(grunt) {
             '*.{ico,txt}',
             'icons/*',
             '.htaccess',
-            '*.html',
-            '{,*/}*.html',
             '{,*/}*.{webp}',
-            '{,*/}*.{unity3d}'
+            '{,*/}*.{unity3d}',
+            '{,*/}*.min.css'
           ]
         }]
       }
