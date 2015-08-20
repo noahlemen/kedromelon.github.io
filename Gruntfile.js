@@ -82,7 +82,7 @@ module.exports = function(grunt) {
             'icons/*',
             '.htaccess',
             '{,*/}*.{webp}',
-            '{,*/}*.{unity3d}',
+            '{,*/}*.unity3d',
             '{,*/}*.min.css'
           ]
         }]
