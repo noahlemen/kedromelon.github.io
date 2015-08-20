@@ -87,6 +87,15 @@ module.exports = function(grunt) {
           ]
         }]
       }
+    },
+    git_deploy: {
+      dist: {
+        options: {
+          url: 'git@github.com:kedromelon/kedromelon.github.io.git',
+          branch: 'master'
+        },
+        src: 'build'
+      },
     }
   });
 
@@ -99,6 +108,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-htmlcompressor');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-git-deploy');
 
   // Default task(s).
   grunt.registerTask('default', [
@@ -110,6 +120,8 @@ module.exports = function(grunt) {
     'copy'
   ]);
 
-  grunt.registerTask('deploy', ['default']);
+  grunt.registerTask('deploy', [
+    'default',
+  ]);
 
 };
