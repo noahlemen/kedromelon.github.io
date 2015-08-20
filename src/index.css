@@ -317,6 +317,10 @@ nav ul.sections li:hover a, nav ul.sections li.active a{
     color: #999;
 }
 
+.xp-el .desc{
+    padding: 8px;
+}
+
 #content .section > .pure-g > div.unit .el *{
     cursor: inherit;
 }
